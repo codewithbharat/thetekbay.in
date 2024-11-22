@@ -11,6 +11,7 @@ interface BlogPostCardProps {
   showImage?: boolean;
   showAuthor?: boolean;
   showShortDescription?: boolean;
+  width?: string;
 }
 
 const BlogPostCard = ({
@@ -23,14 +24,15 @@ const BlogPostCard = ({
   showAuthor = true,
   showImage = true,
   showShortDescription = true,
+  width,
 }: BlogPostCardProps) => {
   return (
-    <div className="m-10">
+    <div className="my-4 md:my-10 md:mx-5 " style={{width : width}}>
       {/* image */}
       {showImage && <div className="w-full aspect-video bg-gray-200"></div>}
 
       {/* date, category and author */}
-      <div className="flex items-center mt-2 font-serif">
+      <div className="flex items-center mt-2 text-sm font-serif">
         <span className="text-gray-600">{date}</span>
         <span className="text-gray-600 mx-2">|</span>
         <span className="text-gray-600">{category}</span>
