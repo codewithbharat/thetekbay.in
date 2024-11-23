@@ -19,9 +19,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       {/* navigation bar  */}
-      <nav className="flex items-center bg-gray-200 font-mono">
-        <p className="text-sm mx-10"> {new Date().toDateString()} </p>
-        <p className="flex gap-4 p-4 justify-center mx-10 font-medium text-sm ml-auto">
+      <nav className="flex items-center bg-gray-200 font-mono px-2 md:px-10">
+        <p className="text-sm"> {new Date().toDateString()} </p>
+        <p className="flex gap-4 p-4 justify-center font-medium text-sm ml-auto">
           <Link href="/about" className="hover:text-gray-400">
             About
           </Link>
@@ -42,13 +42,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Link
             key={category}
             href={`/${category.toLowerCase().replace(/ /g, "-")}`}
-            className="hover:text-gray-400"
+            className="hover:text-gray-400 text-sm"
           >
             {category}
           </Link>
         ))}
       </nav>
-      <main className="mx-10">{children}</main>
+      <main className="mx-2 md:mx-10">{children}</main>
     </div>
   );
 };
