@@ -1,13 +1,6 @@
 import BlogPostCard from '@/components/web/BlogPostCard';
-import { FC } from 'react';
 
-interface BlogPostProps {
-    params: {
-        category: string;
-    };
-}
-
-const BlogPost: FC<BlogPostProps> = ({ params }) => {
+const BlogPost = ({ params }) => {
     const { category}  = params;
 
     const News = [{
