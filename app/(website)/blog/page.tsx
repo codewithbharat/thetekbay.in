@@ -2,9 +2,10 @@ import React from 'react'
 
 const Blog = () => {
   return (
-    <div>
-      Blog Page
-    </div>
+   <main>
+      <h1>Blogs</h1>
+      
+    </main>
   )
 }
 
