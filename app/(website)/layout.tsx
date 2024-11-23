@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* date today  */}
       </header>
 
-      <nav className="flex gap-4 p-4 justify-center border-b-2 border-b-black mx-10 border-t-4 font-medium">
+      <nav className="flex gap-4 p-4 justify-center border-b-2 border-b-black  border-t-4 font-medium">
         {Categories.map((category) => (
           <Link
             key={category}
