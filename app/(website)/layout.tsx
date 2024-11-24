@@ -47,6 +47,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         ))}
       </nav>
       <main className="mx-2 md:mx-10">{children}</main>
+
+      {/* a deatiled footer with some links  */}
+      <footer className="flex items-center bg-gray-200 font-mono px-2 md:px-10">
+        <p className="text-sm"> &copy; 2024 The TechBay </p>
+        <p className="flex gap-4 p-4 justify-center font-medium text-sm ml-auto">
+          <Link href="/privacy" className="hover:text-gray-400">
+            Privacy
+          </Link>
+
+          <Link href="/terms" className="hover:text-gray-400">
+            Terms
+          </Link>
+        </p>
+      </footer>
     </div>
   );
 };
