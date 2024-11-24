@@ -39,7 +39,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {Categories.map((category) => (
           <Link
             key={category}
-            href={`/${category.toLowerCase()}`}
+            href={`/category/${category.toLowerCase()}`}
             className="hover:text-gray-400 text-sm"
           >
             {category}
