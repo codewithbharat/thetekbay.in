@@ -63,9 +63,9 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
       {/* side bar */}
       <section className="md:basis-2/6 basis-1">
         {/* latest news */}
-        <section className="my-2 mx-2">
+        <section className="mt-8 mx-2">
           {/* latest news label */}
-          <h2 className="border-b-4 font-serif text-xl py-1 font-medium">
+          <h2 className="border-b-2 font-serif text-xl py-1 font-medium">
             Latest News
           </h2>
           <BlogPostCard
