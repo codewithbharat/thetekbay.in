@@ -131,7 +131,7 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
           <h2 className="border-b-4 font-serif text-xl py-1 font-medium">
             More News
           </h2>
-          <div className="">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <BlogPostCard
             date="20 Nov 2024"
             category="Technology"
