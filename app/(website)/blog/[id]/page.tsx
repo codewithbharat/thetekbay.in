@@ -1,6 +1,11 @@
 import BlogPostCard from "@/components/web/BlogPostCard";
 import React from "react";
 
+
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
+
+
 const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   return (
@@ -23,6 +28,14 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
 
         <div className="w-full aspect-video bg-slate-500 mb-2 md:mb-5"></div>
+
+        {/* share to social media */}
+        <div className="flex gap-2 items-center border-b-2 w-fit text-lg">
+            <span className="font-semibold text-gray-700">Share on Social </span>
+        <FaLinkedinIn />
+        <FaXTwitter />
+        <FaWhatsapp />
+        </div>
         {Array(3)
           .fill(null)
           .map((_, index) => (
