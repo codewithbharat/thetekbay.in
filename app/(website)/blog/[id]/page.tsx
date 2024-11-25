@@ -1,10 +1,11 @@
+import BlogPostCard from "@/components/web/BlogPostCard";
 import React from "react";
 
 const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   return (
-    <main>
-      <section>
+    <main className="flex flex-col md:flex-row">
+      <section className="md:basis-4/6 basis-1">
         <h1 className="text-2xl md:text-4xl font-serif my-4 capitalize">
           {id.split("-").join(" ")}
         </h1>
@@ -28,6 +29,68 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             nulla distinctio repellat error harum.
           </p>
         ))}
+      </section>
+      <section className="md:basis-2/6 basis-1">
+        {/* latest news */}
+      <section className="my-2 mx-2">
+          {/* latest news label */}
+          <h2 className="border-b-4 font-serif text-xl py-1 font-medium">
+            Latest News
+          </h2>
+          <BlogPostCard
+            date="20 Nov 2024"
+            category="Technology"
+            author="John "
+            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum mi nec, ultricies metus. Mauris in quam id turpis aliquet aliquet."
+            link="/blog/1"
+            showAuthor={false}
+            showShortDescription={false}
+            showImage={false}
+            titleFontSize="text-sm"
+          />
+          <BlogPostCard
+            date="19 Nov 2024"
+            category="Health"
+            author="Jane "
+            title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            link="/blog/2"
+            showAuthor={false}
+            showShortDescription={false}
+            showImage={false}
+            titleFontSize="text-sm"
+          />
+          <BlogPostCard
+            date="18 Nov 2024"
+            category="Science"
+            author="Alice "
+            title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+            link="/blog/3"
+            showAuthor={false}
+            showShortDescription={false}
+            showImage={false}
+            titleFontSize="text-sm"
+          />
+          <BlogPostCard
+            date="17 Nov 2024"
+            category="Business"
+            author="Michael "
+            title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            link="/blog/4"
+            showAuthor={false}
+            showShortDescription={false}
+            showImage={false}
+            titleFontSize="text-sm"
+          />
+        </section>
+        {/* Adveristiement  */}
+        <section className="my-2 mx-2">
+          <h2 className="border-b-4 font-serif text-xl py-1 font-medium">
+            Advertisement
+          </h2>
+          <div className="w-full aspect-square bg-gray-300 m-1 md:m-4 text-white text-3xl uppercase font-bold flex justify-center items-center">
+            Add here
+          </div>
+        </section>
       </section>
     </main>
   );
