@@ -5,34 +5,50 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   return (
     <main className="flex flex-col md:flex-row">
+      {/* blog page */}
       <section className="md:basis-4/6 basis-1">
         <h1 className="text-2xl md:text-4xl font-serif my-4 capitalize">
           {id.split("-").join(" ")}
         </h1>
-        <div className="w-full aspect-video bg-slate-500 my-2 md:my-5"></div>
-        {Array(3).fill(null).map((_, index) => (
-          <p className="my-4" key={index}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae facilis
-            repellat beatae enim eum dolorum voluptates ex vitae nisi laboriosam
-            voluptatibus, tempora quaerat ullam laborum quam perspiciatis! Neque,
-            mollitia repellendus quos architecto sed maxime ab sit sapiente dolore
-            modi, optio nemo qui cum, iste quia molestiae sequi dolorem accusamus
-            officiis? Veniam, libero, placeat omnis velit et temporibus pariatur
-            accusantium, at alias praesentium iste officiis eos quia tempora
-            doloremque. Itaque eos harum blanditiis laboriosam veritatis id ex?
-            Reiciendis totam, quo cum, laudantium molestiae ipsum error odit
-            inventore, impedit a unde. Repudiandae omnis asperiores sapiente quos
-            ducimus aliquid, ratione molestias deleniti expedita possimus nihil at
-            harum, fugit natus optio voluptatem autem unde earum, quis quas
-            laboriosam voluptatibus repellendus deserunt. Neque quia quas autem
-            natus maiores culpa! Laborum quibusdam vero officia deserunt tenetur
-            nulla distinctio repellat error harum.
-          </p>
-        ))}
+
+        {/* date, category and author */}
+        <div className="flex items-center py-2 text-sm font-serif border-t-2 capitalize">
+          <span className="text-gray-600">
+            {new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}
+          </span>
+          <span className="text-gray-600 mx-2">|</span>
+          <span className="text-gray-600">category</span>
+          <span className="text-gray-600 mx-2">|</span>
+          <span className="text-gray-600">author</span>
+        </div>
+
+        <div className="w-full aspect-video bg-slate-500 mb-2 md:mb-5"></div>
+        {Array(3)
+          .fill(null)
+          .map((_, index) => (
+            <p className="my-4" key={index}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+              facilis repellat beatae enim eum dolorum voluptates ex vitae nisi
+              laboriosam voluptatibus, tempora quaerat ullam laborum quam
+              perspiciatis! Neque, mollitia repellendus quos architecto sed
+              maxime ab sit sapiente dolore modi, optio nemo qui cum, iste quia
+              molestiae sequi dolorem accusamus officiis? Veniam, libero,
+              placeat omnis velit et temporibus pariatur accusantium, at alias
+              praesentium iste officiis eos quia tempora doloremque. Itaque eos
+              harum blanditiis laboriosam veritatis id ex? Reiciendis totam, quo
+              cum, laudantium molestiae ipsum error odit inventore, impedit a
+              unde. Repudiandae omnis asperiores sapiente quos ducimus aliquid,
+              ratione molestias deleniti expedita possimus nihil at harum, fugit
+              natus optio voluptatem autem unde earum, quis quas laboriosam
+              voluptatibus repellendus deserunt. Neque quia quas autem natus
+              maiores culpa! Laborum quibusdam vero officia deserunt tenetur
+              nulla distinctio repellat error harum.
+            </p>
+          ))}
       </section>
       <section className="md:basis-2/6 basis-1">
         {/* latest news */}
-      <section className="my-2 mx-2">
+        <section className="my-2 mx-2">
           {/* latest news label */}
           <h2 className="border-b-4 font-serif text-xl py-1 font-medium">
             Latest News
