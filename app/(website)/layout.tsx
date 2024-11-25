@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </nav>
       {/* the header title  */}
       <header className="text-center text-4xl md:text-6xl font-bold p-4 font-serif captalize">
-        <Link href="/"> The TechBay</Link>
+        <Link href="/"> The Tekno Times</Link>
         {/* date today  */}
       </header>
 

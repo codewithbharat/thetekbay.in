@@ -3,8 +3,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "TechBay",
-  description: "TechBay is a platform for tech enthusiasts to share their knowledge and learn from others.",
+  title: "The Tekno Times",
+  description: "The Tekno Times is a platform for tech enthusiasts to share their knowledge and learn from others.",
 };
 
 export default function RootLayout({
