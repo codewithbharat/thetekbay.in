@@ -1,19 +1,12 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
+import CategoriesNavigation from "@/components/web/CategoriesNavigation";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const Categories = [
-    "Software",
-    "Gadgets",
-    "Trends",
-    "Mobile",
-    "Developers",
-  ];
-
   return (
     <div>
       {/* navigation bar  */}
@@ -35,17 +28,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* date today  */}
       </header>
 
-      <nav className="flex gap-4 p-4 justify-center border-b-2 border-b-black  border-t-4 font-medium">
-        {Categories.map((category) => (
-          <Link
-            key={category}
-            href={`/category/${category.toLowerCase()}`}
-            className="hover:text-gray-400 text-sm"
-          >
-            {category}
-          </Link>
-        ))}
-      </nav>
+      {/* navigation bar for categories  */}
+      <CategoriesNavigation />
+
       <main className="mx-2 md:mx-10">{children}</main>
 
       {/* a deatiled footer with some links  */}
