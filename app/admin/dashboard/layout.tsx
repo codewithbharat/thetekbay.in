@@ -46,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Link>
         ))}
       </nav>
-      <main className="bg-[rgb(18,25,39)] w-full text-white">{children}</main>
+      <main className="bg-[rgb(18,25,39)] w-full text-white p-4">{children}</main>
     </div>
   );
 };
