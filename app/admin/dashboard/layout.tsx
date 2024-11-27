@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import React, { ReactNode } from "react";
+import { usePathname } from "next/navigation";
 
+// Icons from react-icons
 import { MdDashboard } from "react-icons/md";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { FaPenNib, FaStar } from "react-icons/fa";
@@ -15,25 +17,28 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const links = [
     { href: "/admin/dashboard", label: "Dashboard", icon: <MdDashboard /> },
-    { href: "/admin/notifications", label: "Notifications", icon: <IoNotificationsSharp />,},
-    { href: "/admin/blogs", label: "Blogs", icon: <FaPenNib /> },
-    { href: "/admin/popular", label: "Popular", icon: <FaStar /> },
-    { href: "/admin/settings", label: "Settings", icon: <FaGear /> },
+    { href: "/admin/dashboard/notifications", label: "Notifications", icon: <IoNotificationsSharp />,},
+    { href: "/admin/dashboard/blogs", label: "Blogs", icon: <FaPenNib /> },
+    { href: "/admin/dashboard/popular", label: "Popular", icon: <FaStar /> },
+    { href: "/admin/dashboard/settings", label: "Settings", icon: <FaGear /> },
   ];
 
  // Get the current path
  const [currentPath, setCurrentPath] = React.useState("");
+
+
+    const pathname = usePathname();
     React.useEffect(() => {
-    setCurrentPath(window.location.pathname);
-    }, []);
+      setCurrentPath(pathname);
+    }, [pathname]);
 
   return (
     <div className="flex">
-      <nav className="h-screen p-4 text-lg font-semibold tracking-wide">
+      <nav className="h-screen p-4 text-lg font-semibold tracking-wide mx-2">
         {links.map((link) => (
           <Link
             key={link.href}
-            className={`${currentPath === link.href ? "bg-gray-200" : null} p-4 rounded-lg flex py-1 items-center`}
+            className={`${currentPath === link.href ? "bg-gray-200" : null} px-6 rounded-lg flex py-1 items-center`}
             href={link.href}
           >
             {link.icon}
@@ -41,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Link>
         ))}
       </nav>
-      <main className="bg-[rgb(18,25,39)] w-full">{children}</main>
+      <main className="bg-[rgb(18,25,39)] w-full text-white">{children}</main>
     </div>
   );
 };
