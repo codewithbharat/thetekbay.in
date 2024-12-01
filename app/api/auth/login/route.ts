@@ -4,6 +4,13 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import prisma from '@/lib/prisma';
 
+// cors 
+export const cors = {
+  origin: '*',
+  headers: 'Content-Type',
+  methods: 'POST',
+};
+
 export async function POST(req: Request) {
   const { email, password }: { email: string; password: string } = await req.json();
   
