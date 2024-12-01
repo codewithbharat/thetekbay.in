@@ -26,5 +26,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-    matcher: ['/dashboard/:path*', '/api/posts/:path*', '/api/users/:path*'] // make sure paths match the actual routes
+    matcher: ['/dashboard/:path*'] // make sure paths match the actual routes
 };
