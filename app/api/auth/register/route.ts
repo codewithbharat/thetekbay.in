@@ -30,8 +30,11 @@ export async function POST(req: Request) {
 
   } catch (error) {
     // Handle Prisma specific errors
-    if ((error as any).code === 'P2002') {
+    if (error instanceof Error && 'code' in error && error.code === 'P2002') {
       // This error occurs if the email already exists even after the check
+      if (error instanceof Error && 'code' in error && error.code === 'P2002') {
+        return NextResponse.json({ error: 'User with this email already exists' }, { status: 400 });
+      }
       return NextResponse.json({ error: 'User with this email already exists' }, { status: 400 });
     }
 

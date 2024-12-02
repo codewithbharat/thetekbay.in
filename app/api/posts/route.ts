@@ -3,19 +3,14 @@ import prisma from '@/lib/prisma'; // Assuming prisma instance is exported from 
 import { NextRequest } from 'next/server';
 import jwt from 'jsonwebtoken';
 
-// CORS configuration
-export const cors = {
-  origin: '*',
-  headers: 'Content-Type',
-  methods: 'POST',
-};
+
 
 // Utility function to verify the JWT and extract user info
 const verifyToken = (token: string) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET!);
     return decoded as { id: number; role: string }; // Assuming the token contains the user ID and role
-  } catch (error) {
+  } catch {
     throw new Error('Invalid or expired token');
   }
 };
@@ -33,7 +28,7 @@ export async function POST(req: NextRequest) {
   try {
     const decoded = verifyToken(token);
     userId = decoded.id;
-  } catch (error) {
+  } catch{
     return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
   }
 
