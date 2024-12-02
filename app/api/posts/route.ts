@@ -15,6 +15,9 @@ const verifyToken = (token: string) => {
   }
 };
 
+
+// POST /api/posts => Create a new post
+
 export async function POST(req: NextRequest) {
   // Get the authorization token from the request headers
   const token = req.headers.get('Authorization')?.split(' ')[1]; // Bearer <token>
@@ -73,5 +76,32 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(post, { status: 201 });
   } catch (error) {
     return NextResponse.json({ error: error }, { status: 500 });
+  }
+}
+
+
+// GET /api/posts => Get all posts
+
+export async function GET(req: NextRequest) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const page = parseInt(searchParams.get('page') || '1', 10);
+    const limit = parseInt(searchParams.get('limit') || '10', 10);
+    const skip = (page - 1) * limit;
+
+    // Fetch posts with pagination
+    const posts = await prisma.post.findMany({
+      skip,
+      take: limit,
+      include: {
+        category: true,
+        author: true,
+      },
+    });
+
+    return NextResponse.json(posts, { status: 200 });
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
