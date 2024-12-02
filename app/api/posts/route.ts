@@ -94,8 +94,13 @@ export async function GET(req: NextRequest) {
       skip,
       take: limit,
       include: {
-        category: true,
-        author: true,
+      category: true,
+      author: {
+        select: {
+        name: true,
+        email: true,
+        },
+      },
       },
     });
 
