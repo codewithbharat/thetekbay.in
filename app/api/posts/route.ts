@@ -38,9 +38,32 @@ export async function POST(req: NextRequest) {
   }
 
   // Get the post data from the request body
-  const { title, content, categoryId, imageUrl }: { title: string; content: string; categoryId: number; imageUrl?: string } = await req.json();
+  const { title, content, category, imageUrl }: { title: string; content: string; category: string; imageUrl?: string } = await req.json();
+
+
 
   try {
+
+    let categoryId : number;
+    // Find the category ID based on the category name
+    const categoryData = await prisma.category.findFirst({
+      where: { name: category },
+    });
+  
+    if (!categoryData) {
+       // create the category if it doesn't exist
+      const newCategory = await prisma.category.create({
+        data: {
+          name: category,
+        },
+      });
+  
+      // Use the newly created category ID
+      categoryId = newCategory.id;
+    } else {
+      categoryId = categoryData.id;
+    }
+    
     // Create the post and associate the user as the author
     const post = await prisma.post.create({
       data: {
