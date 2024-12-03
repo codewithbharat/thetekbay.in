@@ -6,19 +6,21 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import { LuSearch } from "react-icons/lu";
 
 const CategoriesNavigation = () => {
-    const Categories = [
-        "Software",
-        "Gadgets",
-        "Trends",
-        "Mobile",
-        "Developers",
-      ];
     const [toggle, setToggle] = useState(true);
+    const [Categories, setCategories] = useState<{id: number, name: string }[]>([]);
 
     useEffect(() => {
         if (window.innerWidth < 768) {
           setToggle(false);
         }
+
+        async function fetchData() {
+          const response = await fetch('/api/categories');
+          const result = await response.json();
+          setCategories(result);
+        }
+    
+        fetchData();
       } 
     , []);
 
@@ -37,14 +39,18 @@ const CategoriesNavigation = () => {
     <IoClose onClick={() => setToggle(!toggle)}/>
     </span>
         {Categories.map((category) => (
-          <Link
-            key={category}
-            onClick={() => setToggle(!toggle)}
-            href={`/category/${category.toLowerCase()}`}
+            <Link
+            key={category.id}
+            onClick={() => {
+              if (window.innerWidth < 768) {
+              setToggle(false);
+              }
+            }}
+            href={`/category/${category.name.toLowerCase()}`}
             className="hover:text-gray-400 text-xl md:text-sm"
-          >
-            {category}
-          </Link>
+            >
+            {category.name}
+            </Link>
         ))}
       </nav>}
       <button className="py-2">
