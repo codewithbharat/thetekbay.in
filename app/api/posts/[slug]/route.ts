@@ -3,9 +3,9 @@ import prisma from '@/lib/prisma'; // Assuming prisma instance is exported from 
 import { NextRequest } from 'next/server';
 
 // GET /api/posts/[slug] => Get a post by its slug
-export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
+export async function GET(req: NextRequest) {
   try {
-    const { slug } = params; // Access the slug from the URL parameters
+    const  slug = req.nextUrl.pathname.split('/').pop(); // Access the slug from the URL parameters
 
     if (!slug) {
       return NextResponse.json({ error: 'Slug is required' }, { status: 400 });

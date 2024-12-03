@@ -10,7 +10,7 @@ export async function GET() {
 
     // Return the response with categories
     return NextResponse.json(categories)
-  } catch (error) {
+  } catch {
     // Handle any errors
     return NextResponse.json({ error: 'Failed to fetch categories' }, { status: 500 })
   }

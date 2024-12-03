@@ -3,10 +3,10 @@ import prisma from '@/lib/prisma'; // Assuming prisma instance is exported from 
 import { NextRequest } from 'next/server';
 
 // GET /api/posts/category/[category] => Get posts by category
-export async function GET(req: NextRequest, { params }: { params: { category: string } }) {
+export async function GET(req: NextRequest) {
   try {
-    const { category } = params; // Access the category from the URL parameters
-
+    const category = req.nextUrl.pathname.split('/').pop();
+  
     if (!category) {
       return NextResponse.json({ error: 'Category is required' }, { status: 400 });
     }
