@@ -13,17 +13,17 @@ export async function GET(req: NextRequest) {
 
     // Fetch the post by slug, including the associated category and author
     const post = await prisma.post.findUnique({
-      where: { slug: slug as string },
-      include: {
-        category: true,
-        author: {
-          select: {
-            name: true,
-            email: true,
+        where: { slug: slug as string }, // ensure 'slug' exists and is a string
+        include: {
+          category: true,
+          author: {
+            select: {
+              name: true,
+              email: true,
+            },
           },
         },
-      },
-    });
+      });      
 
     if (!post) {
       return NextResponse.json({ error: 'Post not found' }, { status: 404 });
