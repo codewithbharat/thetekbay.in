@@ -19,6 +19,7 @@ model User {
 model Post {
   id         Int       @id @default(autoincrement())
   title      String
+   slug      String   @unique // Add slug field, ensure it's unique
   content    String
   published  Boolean   @default(false)
   imageUrl   String?   // Nullable field for image URL

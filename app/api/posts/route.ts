@@ -15,6 +15,14 @@ const verifyToken = (token: string) => {
   }
 };
 
+// Utility function to generate a slug from the title
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric characters with hyphens
+    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+}
+
 
 // POST /api/posts => Create a new post
 
@@ -42,6 +50,9 @@ export async function POST(req: NextRequest) {
 
   try {
 
+    // Generate the slug from the title
+    const slug = generateSlug(title);
+
     let categoryId : number;
     // Find the category ID based on the category name
     const categoryData = await prisma.category.findFirst({
@@ -68,6 +79,7 @@ export async function POST(req: NextRequest) {
         title,
         content,
         categoryId,
+        slug,
         imageUrl,
         authorId: userId, // Use the user ID from the token as the authorId
       },

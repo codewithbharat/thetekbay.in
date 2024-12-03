@@ -80,6 +80,8 @@ async function main() {
     // Add more posts as needed
   ].map((post) => ({
     ...post,
+    slug: post.title.toLowerCase().replace(/ /g, '-'),
+    ...post,
     authorId: adminUser.id,
   }));
 

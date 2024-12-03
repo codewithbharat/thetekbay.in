@@ -128,7 +128,7 @@ function main() {
                             categoryId: (_e = allCategories.find(function (c) { return c.name === 'Business'; })) === null || _e === void 0 ? void 0 : _e.id,
                         },
                         // Add more posts as needed
-                    ].map(function (post) { return (__assign(__assign({}, post), { authorId: adminUser.id })); });
+                    ].map(function (post) { return (__assign(__assign(__assign(__assign({}, post), { slug: post.title.toLowerCase().replace(/ /g, '-') }), post), { authorId: adminUser.id })); });
                     return [4 /*yield*/, prisma.post.createMany({
                             data: postsData,
                         })];
