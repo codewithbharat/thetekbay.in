@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
 
     // Fetch the post by slug, including the associated category and author
     const post = await prisma.post.findUnique({
-      where: { slug },
+      where: { slug: slug },
       include: {
         category: true,
         author: {
