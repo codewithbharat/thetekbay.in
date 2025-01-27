@@ -38,7 +38,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {links.map((link) => (
           <Link
             key={link.href}
-            className={`${currentPath === link.href ? "bg-gray-200" : null} px-6 rounded-lg flex py-1 items-center`}
+            className={`${currentPath === link.href ? "bg-gray-200 dark:bg-gray-800" : null} px-6 rounded-lg flex py-1 items-center`}
             href={link.href}
           >
             {link.icon}

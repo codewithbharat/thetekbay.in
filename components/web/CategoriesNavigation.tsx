@@ -53,9 +53,9 @@ const CategoriesNavigation = () => {
                     setToggle(false);
                   }
                 }}
-                href={`/category/${category.name.toLowerCase()}`}
+                href={`/category/${category.name}`}
                 className={`hover:text-black dark:hover:text-white  ${
-                  pathName === `/category/${category.name.toLowerCase()}`
+                  pathName === `/category/${category.name}`
                     ? "text-black dark:text-white"
                     : "text-gray-500 dark:text-gray-400"
                 }  text-xl md:text-sm`}
