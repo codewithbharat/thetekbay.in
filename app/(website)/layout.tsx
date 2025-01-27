@@ -10,7 +10,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       {/* navigation bar  */}
-      <nav className="flex items-center bg-gray-200 font-mono px-2 md:px-10">
+      <nav className="flex items-center bg-gray-200 dark:bg-gray-900 font-mono px-2 md:px-10">
         <p className="text-sm"> {new Date().toDateString()} </p>
         <p className="flex gap-4 p-4 justify-center font-medium text-sm ml-auto">
           <Link href="/about" className="hover:text-gray-400">

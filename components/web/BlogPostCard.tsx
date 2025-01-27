@@ -29,7 +29,7 @@ const BlogPostCard = ({
   return (
     <div className="my-4 md:my-10 md:mx-5 " style={{width : width}}>
       {/* image */}
-      {showImage && <div className="w-full aspect-video bg-gray-200"></div>}
+      {showImage && <div className="w-full aspect-video bg-gray-200 dark:bg-slate-600 rounded-md"></div>}
 
       {/* date, category and author */}
       <div className="flex items-center mt-2 text-sm font-serif">
