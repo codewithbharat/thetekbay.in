@@ -17,6 +17,7 @@ export default async function Page({
       name: string
     },
     date: string,
+    content: string,
     category: {
       id: number,
       name: string,
@@ -36,6 +37,7 @@ export default async function Page({
         author={news.author.name}
         date={news.date}
         category={news.category.name} 
+        shortDescription={news.content.split(' ').slice(0, 20).join(' ')}
         link={`/blog/${news.title
           .replace(/\s+/g, "-")
           .toLowerCase()}`}

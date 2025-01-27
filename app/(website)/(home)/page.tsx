@@ -35,7 +35,6 @@ const Home = () => {
             title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum mi nec, ultricies metus. Mauris in quam id turpis aliquet aliquet."
             link="/blog/1"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -46,7 +45,6 @@ const Home = () => {
             title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/2"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -57,7 +55,6 @@ const Home = () => {
             title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
             link="/blog/3"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -68,7 +65,6 @@ const Home = () => {
             title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/4"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -89,7 +85,6 @@ const Home = () => {
             title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum mi nec, ultricies metus. Mauris in quam id turpis aliquet aliquet."
             link="/blog/1"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="19 Nov 2024"
@@ -98,7 +93,6 @@ const Home = () => {
             title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/2"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="18 Nov 2024"
@@ -107,7 +101,6 @@ const Home = () => {
             title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
             link="/blog/3"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="17 Nov 2024"
@@ -116,7 +109,6 @@ const Home = () => {
             title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/4"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="16 Nov 2024"
@@ -125,7 +117,6 @@ const Home = () => {
             title="Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
             link="/blog/5"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="15 Nov 2024"
@@ -134,7 +125,6 @@ const Home = () => {
             title="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti."
             link="/blog/6"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="14 Nov 2024"
@@ -143,7 +133,6 @@ const Home = () => {
             title="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus."
             link="/blog/7"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="13 Nov 2024"
@@ -152,7 +141,6 @@ const Home = () => {
             title="Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae."
             link="/blog/8"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="12 Nov 2024"
@@ -161,7 +149,6 @@ const Home = () => {
             title="Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
             link="/blog/9"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="11 Nov 2024"
@@ -170,7 +157,6 @@ const Home = () => {
             title="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
             link="/blog/10"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="10 Nov 2024"
@@ -179,7 +165,6 @@ const Home = () => {
             title="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore."
             link="/blog/11"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="19 Nov 2024"
@@ -188,7 +173,6 @@ const Home = () => {
             title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/2"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
         </section>
       </section>
@@ -207,7 +191,6 @@ const Home = () => {
             title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum mi nec, ultricies metus. Mauris in quam id turpis aliquet aliquet."
             link="/blog/1"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="19 Nov 2024"
@@ -216,7 +199,6 @@ const Home = () => {
             title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/2"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="18 Nov 2024"
@@ -225,7 +207,6 @@ const Home = () => {
             title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
             link="/blog/3"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="17 Nov 2024"
@@ -234,7 +215,6 @@ const Home = () => {
             title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/4"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="16 Nov 2024"
@@ -243,7 +223,6 @@ const Home = () => {
             title="Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
             link="/blog/5"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="15 Nov 2024"
@@ -252,7 +231,6 @@ const Home = () => {
             title="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti."
             link="/blog/6"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="14 Nov 2024"
@@ -261,7 +239,6 @@ const Home = () => {
             title="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus."
             link="/blog/7"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="13 Nov 2024"
@@ -270,7 +247,6 @@ const Home = () => {
             title="Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae."
             link="/blog/8"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="12 Nov 2024"
@@ -279,7 +255,6 @@ const Home = () => {
             title="Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
             link="/blog/9"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="11 Nov 2024"
@@ -288,7 +263,6 @@ const Home = () => {
             title="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
             link="/blog/10"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="10 Nov 2024"
@@ -297,7 +271,6 @@ const Home = () => {
             title="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore."
             link="/blog/11"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
           <BlogPostCard
             date="19 Nov 2024"
@@ -306,7 +279,6 @@ const Home = () => {
             title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/2"
             titleFontSize="text-md"
-            showShortDescription={false}
           />
         </section>
       </section>

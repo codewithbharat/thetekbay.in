@@ -75,7 +75,6 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum mi nec, ultricies metus. Mauris in quam id turpis aliquet aliquet."
             link="/blog/1"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -86,7 +85,6 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/2"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -97,7 +95,6 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
             link="/blog/3"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -108,7 +105,6 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/4"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -139,7 +135,6 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum mi nec, ultricies metus. Mauris in quam id turpis aliquet aliquet."
             link="/blog/1"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -150,7 +145,6 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/2"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -161,7 +155,6 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
             link="/blog/3"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
@@ -172,7 +165,6 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="/blog/4"
             showAuthor={false}
-            showShortDescription={false}
             showImage={false}
             titleFontSize="text-sm"
           />
