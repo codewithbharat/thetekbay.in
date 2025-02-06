@@ -1,4 +1,4 @@
-import { NextResponse, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import puppeteer from "puppeteer";
 
 
@@ -6,7 +6,7 @@ interface ScrapedData {
   index: number;
   text: string;
 }
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const url = "https://trends.google.com/trending?geo=US&hl=en-GB&category=18&hours=24"; // Change to your target website
     const targetClass = ".mZ3RIc"; // Replace with the actual class name
